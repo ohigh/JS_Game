@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS GAME</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <audio id="sound"></audio>
-    <main class="container">
-        <div class="row">
-            <div class="col-12 text-center mt-5"><h1> A-MAZE-ING GAME</h1></div>
-            <div class="col-2 offset-3"><h3>Point:<span id="disply-points" class="col-4"></span></h3></div>
-            <div class="col-4"><h3>Time:<span id="disply-time" class="col-12"></span></h3></div>
+    <main class="">
+        <div class="intro">
+            <div class="conteiner">
+            <div class="col-12 text-center my-5">
+                <h1>WELKOME to A-MAZE-ING GAME</h1>
+            </div>
+            <div class="col-6 offset-3 ">
+                <H2 class="text-center mt-3">Rules:</H2>
+                <h3 class="text-center mt-3">
+                        You have 30 seconds to get through the maze and reach the treasure chest.
+                </h3>
+                <h4 class="text-center mt-3">- You get points for every move on the path.</h4>
+                <h4 class="text-center mt-3">- You get extra points if you collect diamonds and keys, if you go through the tunnel and if you reach the treasure chest.</h4>
+                <h4 class="text-center mt-3">- You lose points if you hit the wall.</h4>
+                <h4 class="text-center mt-3">- You die if you hit a bomb or fail to reach the treasure chest within 30 seconds.</h4>
+                <h3 class="text-center mt-5">- Enjoy!</h3>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <input class="btn btn-danger" type="button" id="start" value="START GAME">
             
+            </div>
+        </div></div>
+        <div class="losegame">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div>
+                <div class="col-12 text-center">
+                    <h1>A-MAZE-ING GAME</h1>
+                </div>
+                <div class="col-12 text-center my-5">
+                    <h1>GAME OVER</h1>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <input class="btn btn-danger" type="button" id="startAgain" value="TRY AGAIN">
+                </div>
+            </div></div>
         </div>
-    <center>
-    <canvas id="canvas" width="500" height="500"></canvas>
-</center>
-    
-</main>
-<script src="script.js"></script>
-<script src="basic-funktion.1.js"></script>
+        <div class="wingame">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div>
+                <div class="col-12 text-center">
+                    <h1>A-MAZE-ING GAME</h1>
+                </div>
+                <div class="col-12 text-center my-5">
+                    <h1>HURRAY!</br>YOU WON THE GAME</h1>
+                </div>
+                <div class="col-12  text-center my-5">
+                        <h3>You got <span id="all-points"></span> point in
+                        <span id="all-time"></span> seconds.</h3>
+                    </div>
+                <div class="d-flex justify-content-center">
+                    <input class="btn btn-danger" type="button" id="restart" value="TRY AGAIN">
+                </div>
+            </div></div>
+        </div>
+        <div class="game">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-12 text-center mt-5">
+                        <h1>WELKOME to A-MAZE-ING GAME</h1>
+                    </div>
+                    <!-- </div>
+            <div class="row "> -->
+                    <div class="col-4 offset-2  card text-center">
+                        <h3>Point:<span id="disply-points" class="col-12"></span></h3>
+                    </div>
+                    <div class="col-4 mx-2 card text-center">
+                        <h3>Time:<span id="disply-time" class="col-12"></span></h3>
+                    </div>
+
+                </div>
+                <!-- <div class="jumbotron"> -->
+                <center>
+                    <canvas id="canvas" width="700" height="650"> </canvas>
+                </center>
+                <!-- </div> -->
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="basic-funktion.1.js"></script>
 </body>
+
 </html>

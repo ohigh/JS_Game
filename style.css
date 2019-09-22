@@ -2,13 +2,13 @@ body {
     background-color: beige;
 }
 canvas {
-    border: 13px solid burlywood;
+    border: 13px solid gray;
     border-radius: 5%;
-    padding: 5px;
+    padding: 3px;
     margin-top: 2rem;
     box-shadow: 5px 5px 20px 2px;
     background-blend-mode: color;
-    background-color: beige;
+    background-color: black;
     margin-bottom: 50px
 }
 
@@ -16,3 +16,24 @@ canvas {
     background-color: beige;
 
 }
+.game {
+    display: none;
+}
+
+.losegame, .wingame {
+    position: fixed;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 200;
+    background-color: rgba(245, 245, 220, 0.95);
+
+}
+
+/* .wingame {
+    display: none;
+} */
