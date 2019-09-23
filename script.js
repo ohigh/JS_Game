@@ -3,7 +3,7 @@ let playerPoint = 0;
 
 let canvas = document.querySelector("#canvas");
 let ctx = canvas.getContext('2d');
-let seconds = 0;
+// let seconds = 0;
 let maze = [
     [12, -1, 11, 18, 11, 11, 11, 11, 18, 11, 11, 11, 11, 13],
     [1, 0, 0, 1, 0, 0, 0, 0, 31, 0, 0, 0, 2, 1],
@@ -185,6 +185,8 @@ function startGame() {
             gameOver();
             playSound("loseSound")
         };
+        document.querySelector('#all-time').innerText = seconds;
     }, 1000);
+    
 };
 

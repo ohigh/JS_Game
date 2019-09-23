@@ -73,7 +73,17 @@ function loseAllPoint(yDirection, xDirection) {
 }
 
 function minusPoint(numberOfPoint, yDirection, xDirection) {
-    if (mazeDirection(1, 1, -1, 0, yDirection, xDirection, "failSound") == true) {
+    if (mazeDirection(1, 1, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(11, 11, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(12, 12, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(13, 13, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(14, 14, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(15, 15, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(16, 16, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(17, 17, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(18, 18, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(19, 19, -1, 0, yDirection, xDirection, "failSound") ||
+        mazeDirection(20, 20, -1, 0, yDirection, xDirection, "failSound") == true) {
         removePoint(numberOfPoint);
     };
 }
@@ -129,7 +139,7 @@ function playSound(sound) {
 function gameOver() {
     document.querySelector(".losegame").style.display = "initial";
     clearInterval(time);
-
+    window.move=function(){return false;};
 };
 
 function gameWon() {
@@ -137,4 +147,6 @@ function gameWon() {
     clearInterval(time);
     playSound("winSound")
     document.querySelector("#all-points").innerHTML = playerPoint;
+    document.querySelector('#all-time').innerText = seconds;
+    window.move=function(){return false;};
 };
